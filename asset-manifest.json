@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Weather/static/css/main.d576998b.chunk.css",
+    "main.js": "/Weather/static/js/main.b0b22d59.chunk.js",
+    "main.js.map": "/Weather/static/js/main.b0b22d59.chunk.js.map",
+    "runtime-main.js": "/Weather/static/js/runtime-main.615e23a1.js",
+    "runtime-main.js.map": "/Weather/static/js/runtime-main.615e23a1.js.map",
+    "static/js/2.7454f8b5.chunk.js": "/Weather/static/js/2.7454f8b5.chunk.js",
+    "static/js/2.7454f8b5.chunk.js.map": "/Weather/static/js/2.7454f8b5.chunk.js.map",
+    "static/js/3.1a2da3a3.chunk.js": "/Weather/static/js/3.1a2da3a3.chunk.js",
+    "static/js/3.1a2da3a3.chunk.js.map": "/Weather/static/js/3.1a2da3a3.chunk.js.map",
+    "index.html": "/Weather/index.html",
+    "static/css/main.d576998b.chunk.css.map": "/Weather/static/css/main.d576998b.chunk.css.map",
+    "static/js/2.7454f8b5.chunk.js.LICENSE.txt": "/Weather/static/js/2.7454f8b5.chunk.js.LICENSE.txt",
+    "static/media/DaysWeatherForecastStyle.scss": "/Weather/static/media/IRANSansMobile.ddcd7635.ttf",
+    "static/media/WeatherStyle.scss": "/Weather/static/media/weather.05978746.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.615e23a1.js",
+    "static/js/2.7454f8b5.chunk.js",
+    "static/css/main.d576998b.chunk.css",
+    "static/js/main.b0b22d59.chunk.js"
+  ]
+}
