@@ -1,0 +1,87 @@
+@import "../../Variable.scss";
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "IranSans";
+}
+
+.show-days-weather {
+    width: 86px;
+    height: 150px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    outline: none;
+    border: 2px solid $color-gray-2;
+    border-radius: 5px;
+    @media only screen and (max-width:$bp-small){
+        padding: 5px;
+    }
+    p:nth-child(1) {
+        font-size: 14px;
+        color: $color-white;
+        letter-spacing: 0.5px;
+        margin-top: 5px;
+    }
+    .days-icon {
+        color: $color-white;
+        width: 35px;
+        height: 35px;
+    }
+    .day-humidity {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+        p:nth-child(1) {
+            margin-top: 5px;
+            color: $color-white;
+            font-size: 15px;
+        }
+        .humidity-icon {
+            width: 30px;
+            height: 30px;
+            color: $color-white;
+        }
+    }
+    .days-min-max-temp {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .days-max-temp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            font-size: 15px;
+            .icon {
+                color: $color-white;
+                width: 15px;
+                height: 15px;
+            }
+            p:nth-child(2) {
+                margin-top: 5px;
+                color: $color-white;
+            }
+        }
+        .days-min-temp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            font-size: 15px;
+            .icon {
+                color: $color-white;
+                width: 15px;
+                height: 15px;
+            }
+            p:nth-child(2) {
+                color: $color-white;
+                margin-top: 5px;
+            }
+        }
+    }
+}

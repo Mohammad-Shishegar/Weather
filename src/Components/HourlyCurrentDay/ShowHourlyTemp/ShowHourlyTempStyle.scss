@@ -1,0 +1,52 @@
+@import "../../Variable.scss";
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "IranSans";
+}
+
+.show-temp {
+    width: 80px;
+    height: 150px;
+    margin: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    outline: none;
+    border: 2px solid $color-gray-2;
+    border-radius: 5px;
+    @media only screen and (max-width:$bp-small){
+        padding: 6px;
+    }
+    p:nth-child(1) {
+        font-size: 19px;
+        color: $color-white;
+        margin-top: 2px;
+    }
+    p:nth-child(4) {
+        font-size: 15px;
+        margin-top: 15px;
+        color: $color-white;
+    }
+    .hourly-temp-icon {
+        width: 40px;
+        height: 40px;
+        color: $color-white;
+    }
+    .humidity {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+        p:nth-child(1) {
+            margin-top: 5px;
+            font-size: 15px;
+        }
+        .humidity-icon {
+            width: 30px;
+            height: 30px;
+            color: $color-white;
+        }
+    }
+}

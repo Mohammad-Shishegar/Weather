@@ -1,0 +1,270 @@
+@import "../Variable.scss";
+@import "../animation.scss";
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+//animation
+.animationRight {
+    animation: leftToRight 2s ease-in-out;
+}
+
+.animationLeft {
+    animation: rightToLeft 2s ease-in-out;
+}
+
+.body {
+    width: 100%;
+    font-family: "IranSans";
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    @media only screen and (min-width: 1250px) {
+        height: 100vh;
+    }
+}
+
+.default {
+    background-image: linear-gradient(to left, rgba(#ff66b3, 0.801), rgba(#ff1a8c, 0.801));
+    @media only screen and (min-width: $bp-large) {
+        background-image: url(../../assets/images/weather.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.day {
+    background-image: linear-gradient(to left, rgba(#80bfff, 0.75), rgba(#3399ff, 0.75)); //day
+    @media only screen and (min-width: $bp-large) {
+        background-image: linear-gradient(to left, rgba(#80bfff, 0.75), rgba(#3399ff, 0.75)), url(../../assets/images/weather.jpg); //day
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.night {
+    background-image: linear-gradient(to left, rgba(#00004d, 0.85), rgba(#00001a, 0.85));
+    @media only screen and (min-width: $bp-large) {
+        background-image: linear-gradient(to left, rgba(#00004d, 0.85), rgba(#00001a, 0.85)), url(../../assets/images/weather.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.header {
+    width: 100%;
+    // height: 180px;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media only screen and (max-width: $bp-medium) {
+        height: 35%;
+    }
+    @media only screen and (max-width:$bp-smallest-1) {
+        height: 25%;
+    }
+    .header-input {
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media only screen and (max-width: $bp-medium) {}
+        p:nth-child(2) {
+            display: none;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+            flex-direction: column;
+            height: 150px;
+            p:nth-child(2) {
+                margin-top: 10px;
+                color: $color-error;
+                display: inline;
+            }
+        }
+        .input {
+            width: 250px;
+            height: 50px;
+            background-color: transparent;
+            font-family: "IranSans";
+            color: $color-white;
+            font-size: 16px;
+            border-radius: 15px;
+            padding-left: 5px;
+            outline: none;
+            border: 2px solid $color-gray-2;
+            text-transform: uppercase;
+            &::placeholder {
+                color: $color-white;
+                font-family: "IranSans";
+                letter-spacing: 0.75px;
+            }
+        }
+        .search-btn {
+            width: 130px;
+            height: 40px;
+            font-family: "IranSans";
+            background-color: $color-btn;
+            outline: none;
+            color: $color-gray;
+            border: none;
+            border-radius: 25px;
+            font-size: 15px;
+            margin-left: 20px;
+            box-shadow: 5px 5px 5px $color-gray-1;
+            transition: all 0.2s;
+            @media only screen and (max-width: $bp-smallest) {
+                margin-left: 0px;
+                margin-top: 10px;
+            }
+            &:active {
+                box-shadow: 2px 2px 5px $color-gray-1;
+                background-color: $color-btn-active;
+            }
+        }
+    }
+    p:nth-child(2) {
+        margin-top: 15px;
+        margin-right: 65px;
+        color: $color-error;
+        @media only screen and (max-width: $bp-smallest) {
+            display: none;
+            margin-right: 0px;
+        }
+    }
+}
+
+// current-weather
+.current-weather {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    flex-direction: row;
+    @media only screen and (max-width: $bp-medium) {
+        height: 65%;
+        flex-direction: column;
+    }
+    @media only screen and (max-width:$bp-smallest-1) {
+        height: 75%;
+    }
+    .current-temp {
+        width: 50%;
+        height: 280px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        @media only screen and (max-width: $bp-smallest-1) {
+            height: 150px;
+        }
+        &-icon {
+            width: 150px;
+            height: 150px;
+            color: $color-white;
+            margin-bottom: 45px;
+        }
+        .temp {
+            font-size: 70px;
+            color: $color-white;
+            margin: 0px;
+            display: none;
+        }
+        .status {
+            color: $color-white;
+            font-size: 15px;
+        }
+    }
+    .current-information {
+        width: 50%;
+        height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .current-time {
+            width: 450px;
+            height: 45px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 22px;
+            color: $color-white;
+            @media only screen and (max-width: $bp-smallest-1) {
+                flex-direction: column;
+                p:nth-child(1) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .min-max-temp {
+            width: 450px;
+            height: 45px;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            text-align: center;
+            margin: 20px 0;
+            color: $color-white;
+            display: none;
+            @media only screen and (max-width: $bp-smallest-1) {
+                flex-direction: column;
+                margin-top: 60px;
+                margin-bottom: 60px;
+                p:nth-child(1) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        .main {
+            width: 450px;
+            display: none;
+            height: 45px;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            color: $color-white;
+            @media only screen and (max-width: $bp-smallest-1) {
+                flex-direction: column;
+                p:nth-child(1) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+//hourly and 5 days weather
+.hourly-days-weather {
+    width: 100%;
+    flex-direction: row;
+    overflow: hidden;
+    display: none;
+    @media only screen and (min-width: $bp-large) {
+        background-image: none;
+    }
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
+    .hourly-weather {
+        width: 50%;
+        @media only screen and (max-width: $bp-medium) {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+    .days-weather {
+        width: 50%;
+        @media only screen and (max-width: $bp-medium) {
+            width: 100%;
+            margin-top: 30px;
+        }
+    }
+}
